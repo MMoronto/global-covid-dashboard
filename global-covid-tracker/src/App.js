@@ -7,6 +7,18 @@ function App() {
       <h1>
         Buid a Global COVID-19 Dashboard
       </h1>
+
+      {/* Header */}
+      {/* Title + Select input dropdown field */}
+
+      {/* Info Boxes */}
+      {/* Info Boxes */}
+      {/* Info Boxes */}
+
+      {/* Table */}
+      {/* Graphs */}
+
+      {/* Map */}
     </div>
   );
 }
