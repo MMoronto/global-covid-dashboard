@@ -9,8 +9,11 @@ import './App.css';
 function App() {
   return (
     <div className="app">
+      <div className="app__header">
+
+      </div>
       <h1>GLOBAL COVID-19 DASHBOARD</h1>
-      {/* <FormControl className="app__dropdown">
+      <FormControl className="app__dropdown">
         <Select
           variant="outlined"
           value="abc"
@@ -20,7 +23,7 @@ function App() {
           <MenuItem value="worldwide">Worldwide</MenuItem>
           <MenuItem value="worldwide">Worldwide</MenuItem>
         </Select>
-      </FormControl> */}
+      </FormControl>
 
       {/* Header */}
       {/* Title + Select input dropdown field */}
