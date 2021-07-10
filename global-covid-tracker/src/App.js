@@ -10,20 +10,16 @@ function App() {
   return (
     <div className="app">
       <div className="app__header">
-
+        <h1>GLOBAL COVID-19 DASHBOARD</h1>
+        <FormControl className="app__dropdown">
+          <Select variant="outlined" value="abc">
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+            <MenuItem value="worldwide">Worldwide</MenuItem>
+          </Select>
+        </FormControl>
       </div>
-      <h1>GLOBAL COVID-19 DASHBOARD</h1>
-      <FormControl className="app__dropdown">
-        <Select
-          variant="outlined"
-          value="abc"
-        >
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-          <MenuItem value="worldwide">Worldwide</MenuItem>
-        </Select>
-      </FormControl>
 
       {/* Header */}
       {/* Title + Select input dropdown field */}
