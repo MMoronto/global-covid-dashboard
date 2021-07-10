@@ -7,6 +7,10 @@ import {
 import './App.css';
 
 function App() {
+  const [countries, setCountries] = useState([]);
+
+  // STATE = How to write a variable in REACT <<<<<<
+
   return (
     <div className="app">
       <div className="app__header">
