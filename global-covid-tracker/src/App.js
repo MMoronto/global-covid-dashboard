@@ -13,10 +13,14 @@ function App() {
         <h1>GLOBAL COVID-19 DASHBOARD</h1>
         <FormControl className="app__dropdown">
           <Select variant="outlined" value="abc">
+          {/* Loop through all the countries and 
+          show a drop down list of the options */}
+
+
+            {/* <MenuItem value="worldwide">Worldwide</MenuItem>
             <MenuItem value="worldwide">Worldwide</MenuItem>
             <MenuItem value="worldwide">Worldwide</MenuItem>
-            <MenuItem value="worldwide">Worldwide</MenuItem>
-            <MenuItem value="worldwide">Worldwide</MenuItem>
+            <MenuItem value="worldwide">Worldwide</MenuItem> */}
           </Select>
         </FormControl>
       </div>
