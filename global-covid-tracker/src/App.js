@@ -7,6 +7,19 @@ function App() {
 
   // STATE = How to write a variable in REACT <<<<<<<<
 
+  // https://disease.sh/v3/covid-19/countries
+
+  // USEEFFECT = Runs a piece of code based on a given condition
+
+  useEffect(() => {
+    // The code inside here will run once 
+    // when the component loads and not again after
+    const getCountriesData = async ()
+  }, []); => {
+    await fetch("https://disease.sh/v3/covid-19/countries")
+    .then((response) => AuthenticatorResponse.json())
+  }
+
   return (
     <div className="app">
       <div className="app__header">
