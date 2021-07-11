@@ -14,11 +14,22 @@ function App() {
   useEffect(() => {
     // The code inside here will run once 
     // when the component loads and not again after
-    const getCountriesData = async ()
-  }, []); => {
-    await fetch("https://disease.sh/v3/covid-19/countries")
-    .then((response) => AuthenticatorResponse.json())
-  }
+
+    // async -> send a request, wait for it, do something with info
+
+    const getCountriesData = async () => {
+      await fetch("https://disease.sh/v3/covid-19/countries")
+      .then((response) => AuthenticatorResponse.json())
+      .then((data) => {
+        const countries = data.map((country) => (
+          {
+            name: country.country,
+            value: country.countryInfo
+          }
+        ))
+      })
+    }  
+  }, []); 
 
   return (
     <div className="app">
