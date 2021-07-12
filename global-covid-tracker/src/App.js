@@ -21,12 +21,16 @@ function App() {
       await fetch("https://disease.sh/v3/covid-19/countries")
       .then((response) => AuthenticatorResponse.json())
       .then((data) => {
+
+        
+
         const countries = data.map((country) => (
           {
-            name: country.country,
-            value: country.countryInfo
-          }
-        ))
+            name: country.country, // United STates, United Kingdom
+            value: country.countryInfo.iso2 // UK, USA, FR
+          }));
+
+          setCountries(countries);
       })
     }  
   }, []); 
@@ -41,7 +45,7 @@ function App() {
           show a drop down list of the options */}
 
           {countries.map((country) => (
-            <MenuItem value={country}>{country}</MenuItem>
+            <MenuItem value={country.value}>{country.name}</MenuItem>
           ))}
 
 
