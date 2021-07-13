@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   const [countries, setCountries] = useState(["USA", "Italy", "Nigeria"]);
+  const [country, setCountry] = useState('worldwide')
 
   // STATE = How to write a variable in REACT <<<<<<<<
 
@@ -43,18 +44,10 @@ function App() {
         <h1>GLOBAL COVID-19 DASHBOARD</h1>
         <FormControl className="app__dropdown">
           <Select variant="outlined" value="abc">
-          {/* Loop through all the countries and 
-          show a drop down list of the options */}
-
-          {countries.map((country) => (
-            <MenuItem value={country.value}>{country.name}</MenuItem>
-          ))}
-
-
-            {/* <MenuItem value="worldwide">Worldwide</MenuItem>
             <MenuItem value="worldwide">Worldwide</MenuItem>
-            <MenuItem value="worldwide">Worldwide</MenuItem>
-            <MenuItem value="worldwide">Worldwide</MenuItem> */}
+            {countries.map((country) => (
+              <MenuItem value={country.value}>{country.name}</MenuItem>
+            ))}
           </Select>
         </FormControl>
       </div>
