@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { MenuItem, FormControl, Select } from "@material-ui/core";
+import InfoBox from './Infobox';
 import './App.css';
 
 function App() {
