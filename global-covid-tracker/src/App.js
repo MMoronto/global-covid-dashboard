@@ -27,9 +27,6 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-
-    console.log(countryCode);
-
     setCountry(countryCode);
   };
 
@@ -45,6 +42,12 @@ function App() {
             ))}
           </Select>
         </FormControl>
+      </div>
+
+      <div className="app__stats">
+        {/* InfoBoxes title="Coronavirus cases */}
+        {/* Info Boxes title="Coronavirus recoveries */}
+        {/* Info Boxes title="Coronavirus deaths*/}
       </div>
 
       {/* Header */}
