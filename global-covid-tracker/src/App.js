@@ -47,22 +47,9 @@ function App() {
 
       <div className="app__stats">
         <InfoBox title="Coronavirus Cases" cases={123} total={2000} />
-
         <InfoBox title="Recovered" cases={1234} total={5000} />
-
         <InfoBox title="Deaths" cases={12346} total={6000} />
-
-        {/* InfoBoxes title="Coronavirus cases */}
-        {/* Info Boxes title="Coronavirus recoveries */}
-        {/* Info Boxes title="Coronavirus deaths*/}
       </div>
-
-      {/* Header */}
-      {/* Title + Select input dropdown field */}
-
-      {/* Info Boxes */}
-      {/* Info Boxes */}
-      {/* Info Boxes */}
 
       {/* Table */}
       {/* Graphs */}
