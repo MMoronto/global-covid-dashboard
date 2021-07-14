@@ -28,8 +28,10 @@ function App() {
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
 
-    console.log("RANDOM Country >>> Test", countryCode);
-  }
+    console.log(countryCode);
+
+    setCountry(countryCode);
+  };
 
   return (
     <div className="app">
