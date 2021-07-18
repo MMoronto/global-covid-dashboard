@@ -40,6 +40,8 @@ const [countryInfo, setCountryInfo] = useState({});
     .then(response => response.json())
     .then(data => {
       setCountry(countryCode);
+
+      // All of the data from the conuntry reponse
       setCountryInfo(data);
     })
   };
@@ -60,9 +62,9 @@ const [countryInfo, setCountryInfo] = useState({});
         </div>
 
         <div className="app__stats">
-          <InfoBox title="Coronavirus Cases" cases={123} total={2000} />
-          <InfoBox title="Recovered" cases={1234} total={5000} />
-          <InfoBox title="Deaths" cases={12346} total={6000} />
+          <InfoBox title="Coronavirus Cases" cases={countryInfo.todayCases} total={2000} />
+          <InfoBox title="Recovered" cases={countryInfo.todayRecovered} total={5000} />
+          <InfoBox title="Deaths" cases={countryInfo.todayDeaths} total={6000} />
         </div>
         <Map />
       </div>
