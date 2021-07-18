@@ -6,7 +6,8 @@ import './App.css';
 
 function App() {
   const [countries, setCountries] = useState(["USA", "Italy", "Nigeria"]);
-  const [country, setCountry] = useState('worldwide')
+  const [country, setCountry] = useState('worldwide');
+const [countryInfo, setCountryInfo] = useState({});
 
 
   useEffect(() => {
@@ -38,7 +39,8 @@ function App() {
     await fetch(url)
     .then(response => response.json())
     .then(data => {
-      
+      setCountry(countryCode);
+      setCountryInfo(data);
     })
   };
 
