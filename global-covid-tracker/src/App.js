@@ -34,29 +34,31 @@ function App() {
 
   return (
     <div className="app">
-      <div className="app__header">
-        <h1>GLOBAL COVID-19 DASHBOARD</h1>
-        <FormControl className="app__dropdown">
-          <Select variant="outlined" onChange={onCountryChange} value={country}>
-            <MenuItem value="worldwide">Worldwide</MenuItem>
-            {countries.map((country) => (
-              <MenuItem value={country.value}>{country.name}</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+      <div className="app__left">
+        <div className="app__header">
+          <h1>GLOBAL COVID-19 DASHBOARD</h1>
+          <FormControl className="app__dropdown">
+            <Select variant="outlined" onChange={onCountryChange} value={country}>
+              <MenuItem value="worldwide">Worldwide</MenuItem>
+              {countries.map((country) => (
+                <MenuItem value={country.value}>{country.name}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </div>
+
+        <div className="app__stats">
+          <InfoBox title="Coronavirus Cases" cases={123} total={2000} />
+          <InfoBox title="Recovered" cases={1234} total={5000} />
+          <InfoBox title="Deaths" cases={12346} total={6000} />
+        </div>
+
+        {/* Table */}
+        {/* Graphs */}
+
+        {/* Map */}
+        <Map />
       </div>
-
-      <div className="app__stats">
-        <InfoBox title="Coronavirus Cases" cases={123} total={2000} />
-        <InfoBox title="Recovered" cases={1234} total={5000} />
-        <InfoBox title="Deaths" cases={12346} total={6000} />
-      </div>
-
-      {/* Table */}
-      {/* Graphs */}
-
-      {/* Map */}
-      <Map />
     </div>
   );
 }
