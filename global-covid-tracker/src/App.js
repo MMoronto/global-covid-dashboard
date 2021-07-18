@@ -52,13 +52,12 @@ function App() {
           <InfoBox title="Recovered" cases={1234} total={5000} />
           <InfoBox title="Deaths" cases={12346} total={6000} />
         </div>
-
-        {/* Table */}
-        {/* Graphs */}
-
-        {/* Map */}
         <Map />
       </div>
+      <Card className="app__right">
+        {/* Table */}
+        {/* Graphs */}
+      </Card>
     </div>
   );
 }
