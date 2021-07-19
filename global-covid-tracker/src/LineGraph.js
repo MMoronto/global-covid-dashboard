@@ -11,9 +11,27 @@ function LineGraph() {
         fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
         .then(response => response.json())
         .then(data => {
-        
+    console.log(data);
+
+        });
+    }, []);
+
+    const buildChartData = data => {
+        const chartData = [];
+        let lastDataPoint;
+
+        data.cases.forEach(date => {
+            if (lastDataPoint) {
+                const newDataPoint = {
+                    x: date,
+                    y: data['cases'][date] - lastDataPoint
+                }
+                chartData.push(newDataPoint);
+            }
+            lastDataPoint = data['cases'][date];
+            
         })
-    }, [])
+    }
 
     return (
         <div>
