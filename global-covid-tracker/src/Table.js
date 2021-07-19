@@ -1,11 +1,15 @@
 import React from 'react'
 
-function Table() {
-    return (
-        <div>
-            
-        </div>
-    )
+function Table({ countries }) {
+    return <div className="table">
+        {countries.map(country => (
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+        ))}
+    </div>;
 }
 
-export default Table
+export default Table;
