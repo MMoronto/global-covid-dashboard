@@ -7,7 +7,15 @@ import './App.css';
 function App() {
   const [countries, setCountries] = useState(["USA", "Italy", "Nigeria"]);
   const [country, setCountry] = useState('worldwide');
-const [countryInfo, setCountryInfo] = useState({});
+  const [countryInfo, setCountryInfo] = useState({});
+
+  useEffect(() => {
+    fetch("https://disease.sh/v3/covid-19/all")
+    .then(response => response.json())
+    .then(data => {
+      setCountryInfo(data);
+    })
+  }, [])
 
 
   useEffect(() => {
