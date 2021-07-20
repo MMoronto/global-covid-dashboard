@@ -83,7 +83,7 @@ function LineGraph() {
         };
 
         fetchData();
-    }, []);
+    }, [casesType]);
 
     return (
         <div>
@@ -107,7 +107,7 @@ function LineGraph() {
                 data={{
                     datasets: [
                         {
-                            backgroundColor: "rgba(204, 16, 52, 0.3",
+                            backgroundColor: "rgba(204, 16, 52, 0.3)",
                             borderColor: "#CC1034",
                             data: data,
                         },
