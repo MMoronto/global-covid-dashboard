@@ -48,7 +48,7 @@ const options = {
 };
 
 function LineGraph() {
-    const [data, setDate] = useState({});
+    const [data, setData] = useState({});
 
     // https://disease.sh/v3/..
     //covid-19/historical/all?lastdays=120
@@ -80,13 +80,28 @@ function LineGraph() {
     
                 setData(chartData);
             });
-        } 
+        };
 
+        fetchData();
     }, []);
 
     return (
         <div>
             <h1>I'm a graph</h1>
+            {data?.length > 0 && (
+                    <Line
+                    options={options} 
+                    data={{
+                        datasets: [
+                            {
+                                backgroundColor: "rgba(204, 16, 52, 0.3",
+                                borderColor: "#CC1034",
+                                data: data,
+                            },
+                        ],
+                    }}
+                />
+            )}
             <Line
                 options={options} 
                 data={{
