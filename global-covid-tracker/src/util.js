@@ -32,12 +32,17 @@ export const sortData = (data) => {
 
 // Draw Circles on the Map with interactive tooltips
 export const showDataOnMap = (data, casesType='cases') => {
-    data.map(country => (
+    data.map((country) => (
         <Circle
            center={[country.countryInfo.lat, country.countryInfo.long]}
-           fillOpacity={0.4} 
+           fillOpacity={0.4}
+           color={casesTypeColors[casesType].hex}
+           fillColor={casesTypeColors[casesType].hex}
+           radius={
+               Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
+            }
         >
-
+            
         </Circle>
     ))
 };
