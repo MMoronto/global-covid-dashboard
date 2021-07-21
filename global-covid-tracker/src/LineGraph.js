@@ -50,10 +50,6 @@ const options = {
 function LineGraph() {
     const [data, setData] = useState({});
 
-    // https://disease.sh/v3/..
-    //covid-19/historical/all?lastdays=120
-
-
     const buildChartData = (data, casesType='cases') => {
         const chartData = [];
         let lastDataPoint;
@@ -73,12 +69,14 @@ function LineGraph() {
     useEffect(() => {
         const fetchData = async () => {
             await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
-            .then((response) => response.json())
+            .then((response) => { 
+                return response.json();
+            })
             .then((data) => {
                 let chartData = buildChartData(data, 'cases');
-                console.log(chartData);
-    
                 setData(chartData);
+                console.log(chartData);
+                // buildChart(chartData);
             });
         };
 
