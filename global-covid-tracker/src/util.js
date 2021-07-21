@@ -31,7 +31,7 @@ export const sortData = (data) => {
 };
 
 // Draw Circles on the Map with interactive tooltips
-export const showDataOnMap = (data, casesType='cases') => {
+export const showDataOnMap = (data, casesType='cases') => 
     data.map((country) => (
         <Circle
            center={[country.countryInfo.lat, country.countryInfo.long]}
@@ -42,7 +42,8 @@ export const showDataOnMap = (data, casesType='cases') => {
                Math.sqrt(country[casesType]) * casesTypeColors[casesType].multiplier
             }
         >
-            
+            <Popup>
+                <h1>IM A POPUP</h1>
+            </Popup>
         </Circle>
-    ))
-};
+    ));
