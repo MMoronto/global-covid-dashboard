@@ -10,6 +10,7 @@ function Map({ center, zoom }) {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors '
                 />
+                {/* Loop through countries and draw a bunch of circles on the screen */}
             </LeafletMap>
         </div>
     );
