@@ -47,24 +47,24 @@ const options = {
     },
 };
 
-function LineGraph() {
-    const [data, setData] = useState({});
-
-    const buildChartData = (data, casesType='cases') => {
-        const chartData = [];
-        let lastDataPoint;
-        for(let date in data.cases) {
-            if (lastDataPoint) {
-                const newDataPoint = {
-                    x: date,
-                    y: data[casesType][date] - lastDataPoint
-                };
-                chartData.push(newDataPoint);
-            }
-            lastDataPoint = data[casesType][date];
+const buildChartData = (data, casesType='cases') => {
+    const chartData = [];
+    let lastDataPoint;
+    for(let date in data.cases) {
+        if (lastDataPoint) {
+            const newDataPoint = {
+                x: date,
+                y: data[casesType][date] - lastDataPoint
+            };
+            chartData.push(newDataPoint);
         }
-        return chartData;
-    };
+        lastDataPoint = data[casesType][date];
+    }
+    return chartData;
+};
+
+function LineGraph({ casesType='cases' }) {
+    const [data, setData] = useState({});
 
     useEffect(() => {
         const fetchData = async () => {
