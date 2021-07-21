@@ -23,7 +23,7 @@ function App() {
     .then(data => {
       setCountryInfo(data);
     })
-  }, [])
+  }, []);
 
 
   useEffect(() => {
@@ -39,6 +39,7 @@ function App() {
 
           const sortedData = sortData(data);
           setTableData(sortedData);
+          setMapCountries(data);
           setCountries(countries);
       });
     };
