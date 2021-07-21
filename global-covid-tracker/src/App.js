@@ -47,7 +47,6 @@ function App() {
 
   const onCountryChange = async (event) => {
     const countryCode = event.target.value;
-    setCountry(countryCode);
 
     const_url = 
       countryCode === 'worldwide' 
@@ -57,10 +56,11 @@ function App() {
     .then(response => response.json())
     .then(data => {
       setCountry(countryCode);
-
-      // All of the data from the conuntry reponse
       setCountryInfo(data);
-    })
+
+      setMapCenter([data.countryInfo.lat, data.countryInfo.lng]);
+      setMapZoom(4);
+    });
   };
 
   return (
