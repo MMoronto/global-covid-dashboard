@@ -122,7 +122,7 @@ function App() {
           <h3>Live Cases by Country</h3>
           <Table countries={tableData} />
           <h3>Worldwide new {casesType} </h3>
-          <LineGraph casesType={casesType} />
+          <LineGraph className="app__graph" casesType={casesType} />
         </CardContent>
       </Card>
     </div>
@@ -130,8 +130,3 @@ function App() {
 }
 
 export default App;
-
-// Add this in your component file
-require('react-dom');
-window.React2 = require('react');
-console.log(window.React1 === window.React2);
