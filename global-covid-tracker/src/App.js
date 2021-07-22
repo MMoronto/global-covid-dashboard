@@ -106,6 +106,7 @@ function App() {
           />
         </div>
         <Map 
+          casesType={casesType}
           countries={mapCountries}
           center={mapCenter}
           zoom={mapZoom}
