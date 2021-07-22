@@ -2,7 +2,7 @@ import React from 'react';
 import "./InfoBox.css";
 import { Card, CardContent, Select, Typography } from "@material-ui/core";
 
-function InfoBox({ title, cases, active, total, ...props }) {
+function InfoBox({ title, cases, isRed, active, total, ...props }) {
     return (
         <Card 
         onClick={props.onClick}
