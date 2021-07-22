@@ -28,13 +28,24 @@ body {
   justify-content: space-between;
 }
 
-.app_left {
+.app__left {
   flex: 0.9;
 }
 
 .app__stats {
   display: flex;
   justify-content: space-between;
+}
+
+.app__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__right .MuiCardContet-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 @media (max-width: 990px) {
