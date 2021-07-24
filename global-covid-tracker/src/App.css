@@ -42,7 +42,7 @@ body {
   flex-direction: column;
 }
 
-.app__right .MuiCardContet-root {
+.app__right .muiCardContet-root {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
