@@ -9,7 +9,7 @@ import LineGraph from "./LineGraph";
 import "leaflet/dist/leaflet.css";
 
 function App() {
-  const [countries, setCountries] = useState(["USA", "Italy", "Nigeria"]);
+  const [countries, setCountries] = useState(["USA", "Italy", "Nigeria", "Ghana"]);
   const [country, setCountry] = useState('worldwide');
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
@@ -32,8 +32,7 @@ function App() {
       await fetch("https://disease.sh/v3/covid-19/countries")
       .then((response) => AuthenticatorResponse.json())
       .then((data) => { 
-        const countries = data.map((country) => (
-          {
+        const countries = data.map((country) => ({
             name: country.country, // United STates, United Kingdom
             value: country.countryInfo.iso2 // UK, USA, FR
           }));
